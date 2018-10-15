@@ -13,15 +13,20 @@
   
     <h3>Dictionary: </h3>
     <p>字典中，存储键值对，键名用于查询和索引；字典也称作映射，主要通过对象储存键值对，包含length属性和一些操作方法。</p>
+    
     <dl> 
-    <dt>Methods</dt>
+      <dt>property</dt>
+      <dd><span class="bold">length</span>:字典中键值对的数量</dd>
+      <dt>Methods</dt>
       <dd><span class="bold">set</span>(key,value): 设置字典中的键值对；</dd>
-      <dd><span class="bold">remove</span>(value): 移除字典中的键值对；</dd>
-      <dd><span class="bold">has</span>(value): 是否有某个键；</dd>
+      <dd><span class="bold">remove</span>(key): 移除字典中的键值对；</dd>
+      <dd><span class="bold">has</span>(key): 是否有某个键；</dd>
       <dd><span class="bold">clear</span>(): 清空字典；</dd>
       <dd><span class="bold">size</span>(): 返回字典中键值对的数量；</dd>
       <dd><span class="bold">keys</span>(): 返回字典中的键组成的数组；</dd>
       <dd><span class="bold">values</span>(): 返回字典中的值组成的数组；</dd>
+      <dd><span class="bold">getItems</span>(): 返回字典对象</dd>
+      <dd><span class="bold">consoleItems</span>(text): console中打印text(可传入自定义提示信息)和字典对象；</dd>
     </dl>
     
     <script src="dictionary.js"></script>
