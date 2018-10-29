@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS-algorithms--Sort</title>
+    <style>
+    dd {
+        color:#444;
+    }
+    .bold {
+        font-weight: bold;
+    }
+    </style>
+</head>
+<body>
+    <p>Open the console to check the output.</p>
+    <h1>Sort/Search 排序/查找</h1>
+    <dl>
+        <dt>冒泡排序</dt>
+        <dd>比较任何两个相邻的项，如果第一个比第二个大则进行交换。(复杂度为O(n<sup>2</sup>))</dd>
+        <dt>选择排序</dt>
+        <dd>一种原址比较排序算法，大致思路是找到数据结构中的最小值并将其放在第一位，接着找到第二小的值并将其放在第二位，以此类推。</dd>
+        <dt>插入排序</dt>
+        <dd>每次将当前元素与前面已排序的元素比较，插入到正确的位置，(最差复杂度为O(n<sup>2</sup>)，排序小型数组或已部分排序的数组性能较前两种方法更好。)</dd>
+        <dt>归并排序</dt>
+        <dd>"分治法"思想，将原始数组分切成较小的数组，直到不能再分，然后再将小数组归并成较大的数组，直到最后只有一个已排序的大数组。(复杂度为O(nlogn)</dd>
+        <dt>快速排序</dt>
+        <dd>通过与选定的标杆元素对比，将较大和较小元素划分在左右两侧，然后对两侧数组分别执行重复操作，直到数组所有元素完成排序。(复杂度为O(nlogn)</dd>
+        <dt>顺序查找</dt>
+        <dd>按顺序逐个对比元素和要查找的值，直到找到为止。(复杂度为O(n)</dd>
+        <dt>二分查找</dt>
+        <dd>数组已排序的情况下，可以每次取中间项元素进行对比，这样每次可以直接忽略一半的元素而不必逐个对比。(复杂度为O(logn)</dd>
+    </dl>
+    <script src="./sort-search.js"></script>
+</body>
+</html>
