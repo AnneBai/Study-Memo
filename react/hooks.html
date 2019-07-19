@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+</head>
+<body>
+    <div id="app"></div>
+
+    <script type="text/babel">
+        const {useState, useEffect} = React;
+        function useCount(timeout) {
+            const [count, setCount] = useState(0);
+            console.log(timeout, count);
+            useEffect(() => {
+                let timerId = null;
+                (function timer() {
+                    timerId = setTimeout(() => {
+                        setCount(count + 1);
+                        timer();
+                    }, timeout);
+                })()
+                return () => clearTimeout(timerId);
+            });
+
+            return count;
+        }
+
+        function TextRed() {
+            const count = useCount(1000);
+            return <p style={{color: "#e22", fontSize: 20}}>{count}</p>
+        }
+        
+        function TextBlue() {
+            const count = useCount(1000);
+            return <p style={{color: "#22e", fontSize: 20}}>{count}</p>
+        }
+
+
+        ReactDOM.render(
+            (<div>
+                    <TextRed />
+                    <TextBlue />
+            </div>),
+            document.querySelector("#app")
+        );
+    </script>
+</body>
+</html>

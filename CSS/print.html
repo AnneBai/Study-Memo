@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .cont {
+            border: 1px solid #ccc;
+            width: 400px;
+            height: 400px;
+        }
+        @media print {
+            .cont {
+                width: 100%;
+                min-height: 400;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button onClick="window.print()">打印</button>
+    <div class="cont">内容</div>
+</body>
+</html>
